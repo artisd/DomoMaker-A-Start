@@ -3,15 +3,15 @@ const models = require('../models');
 const Account = models.Account;
 
 const loginPage = (req, res) => {
-    res.render('login');
+  res.render('login');
 };
 
 const signupPage = (req, res) => {
-    res.render('signup');
+  res.render('signup');
 };
 
 const logout = (req, res) => {
-    res.redirect('/');
+  res.redirect('/');
 };
 
 const login = (request, response) => {
