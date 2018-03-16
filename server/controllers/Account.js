@@ -19,8 +19,8 @@ const login = (request, response) => {
     const res = response;
 
     //force cast to strings to cover up some security flaws
-    username = `${req.body.username}`;
-    password = `${req.body.pass}`;
+    const username = `${req.body.username}`;
+    const password = `${req.body.pass}`;
 
     if (!username || !password) {
         return res.status(400).json({ error: 'RAWR! All fields are required' });
@@ -54,7 +54,7 @@ const signup = (request, response) => {
 
         return res.status(400).json({ error: 'RAWR! All fields are required' });
     }
-    if (req.body.pass != req.body.pass2) {
+    if (req.body.pass !== req.body.pass2) {
         return res.status(400).json({ error: 'RAWR! Passwords do not match' });
     }
 
